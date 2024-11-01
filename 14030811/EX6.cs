@@ -1,5 +1,5 @@
-﻿string food = "";
-string sides = "";
+string food = "";
+string mokhalafat = "";
 
 Console.WriteLine("Be restorane ma khosh amadid!");
 Console.WriteLine("Aya koobide mikhori? (y/n)");
@@ -42,7 +42,7 @@ answer = Console.ReadKey().KeyChar;
 Console.WriteLine();
 if (answer == 'y')
 {
-    sides += "Sabzi, ";
+    mokhalafat += "Sabzi, ";
 }
 
 Console.WriteLine("Aya mast mikhori? (y/n)");
@@ -50,7 +50,7 @@ answer = Console.ReadKey().KeyChar;
 Console.WriteLine();
 if (answer == 'y')
 {
-    sides += "Mast, ";
+    mokhalafat += "Mast, ";
 }
 
 Console.WriteLine("Aya salad mikhori? (y/n)");
@@ -58,9 +58,14 @@ answer = Console.ReadKey().KeyChar;
 Console.WriteLine();
 if (answer == 'y')
 {
-    sides += "Salad, ";
+    mokhalafat += "Salad, ";
 }
 
-
-Console.WriteLine($"Shoma ghazaye {food} ba mokhalafate {sides} sefaresh dadi. Alan Hazer Mishe!");
-    
+if (mokhalafat == "")
+{
+    Console.WriteLine($"Shoma ghazaye {food} bedone mokhalafate sefaresh dadi. Alan Hazer Mishe!");
+}
+else
+{
+    Console.WriteLine($"Shoma ghazaye {food} ba mokhalafate {mokhalafat} sefaresh dadi. Alan Hazer Mishe!");
+}
