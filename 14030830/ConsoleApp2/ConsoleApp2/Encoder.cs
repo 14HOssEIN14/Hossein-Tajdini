@@ -11,7 +11,7 @@ public class Encoder
 {
     public void Encode1(string data, string sender, string receiver, ExportType exportType)
     {
-        string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&* ";
         int sendercode = 0;
         int receivercode = 0;
         for (int j = 0; j < alphabet.Length; j++)
@@ -35,7 +35,7 @@ public class Encoder
 
         int changenumber = (sendercode + receivercode);
         string encodedData = "";
-        foreach (char c in data.Replace(" ", ""))
+        foreach (char c in data)
         {
             int i = 0;
             for (i = 0; i < alphabet.Length; i++)
@@ -70,7 +70,7 @@ public class Encoder
 
     public void Encode2(string data, string sender, string receiver, ExportType exportType)
     {
-        string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&* ";
         int sendercode = 0;
         int receivercode = 0;
         for (int j = 0; j < alphabet.Length; j++)
@@ -94,7 +94,7 @@ public class Encoder
 
         int changenumber = (sendercode * receivercode) / (sendercode + receivercode) ; // adadi ke bahash ramzgozari mikhonim
         string encodedData = "";
-        foreach (char c in data.Replace(" ", ""))
+        foreach (char c in data)
         {
             int i = 0;
             for (i = 0; i < alphabet.Length; i++)
