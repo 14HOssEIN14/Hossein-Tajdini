@@ -1,18 +1,18 @@
 ﻿using ConsoleApp2;
 
-string myData="How You Doing";
+string myData="How You Doing?";
 string sender="ali";
 string receiver="ali";
 Decoder decoder = new Decoder();
 Encoder encoder=new Encoder();
 
 #region  Example
-encoder.Encode1(myData,sender,receiver,ExportType.csv);
-encoder.Encode1(myData,sender,receiver,ExportType.txt);
-encoder.Encode1(myData,sender,receiver,ExportType.ini);
-encoder.Encode2(myData,sender,receiver,ExportType.csv);
-encoder.Encode2(myData,sender,receiver,ExportType.txt);
-encoder.Encode2(myData,sender,receiver,ExportType.ini);
+encoder.Encode1(myData,sender,receiver,SaverFactory.GetFormat("csv"));
+encoder.Encode1(myData,sender,receiver,SaverFactory.GetFormat("txt"));
+encoder.Encode1(myData,sender,receiver,SaverFactory.GetFormat("ini"));
+encoder.Encode2(myData,sender,receiver,SaverFactory.GetFormat("csv"));
+encoder.Encode2(myData,sender,receiver,SaverFactory.GetFormat("txt"));
+encoder.Encode2(myData,sender,receiver,SaverFactory.GetFormat("ini"));
 
 using (StreamReader reader = new StreamReader(@$"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\Encoded1Data\CsvData.csv"))//example
 {

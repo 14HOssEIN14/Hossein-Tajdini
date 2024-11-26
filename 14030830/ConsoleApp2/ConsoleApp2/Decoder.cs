@@ -4,7 +4,7 @@ public class Decoder
 {
     public string decoder1(string sender, string receiver, string code)
     {
-        string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&* ";
+        string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*? ";
         int sendercode = 0;
         int receivercode = 0;
         for (int j = 0; j < alphabet.Length; j++)
@@ -46,7 +46,7 @@ public class Decoder
     }
     public string decoder2(string sender, string receiver, string code)
     {
-        string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&* ";
+        string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*? ";
         int sendercode = 0;
         int receivercode = 0;
         for (int j = 0; j < alphabet.Length; j++)
